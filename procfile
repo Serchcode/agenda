@@ -1,0 +1,1 @@
+web: gunicorn eon_project.wsgi --log-file -
