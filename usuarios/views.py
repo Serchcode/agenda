@@ -39,7 +39,7 @@ class Registration(View):
             perfil.user = new_user
             perfil.save()
             messages.success(request,"Su registro fue exitoso.")
-            return redirect('registro')
+            return redirect('login')
         else:
             context = {
                 'form':new_user_form

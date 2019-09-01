@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<h4>Mi agenda</h4>
+<div class="container">
+<center>
+<a href="{%url 'list_libreta_familia'%}" class="waves-effect waves-light btn-large">contactos familiares</a>
+<a href="{%url 'list_libreta_trabajo'%}" class="waves-effect waves-light btn-large">contactos de trabajo</a>
+</center>   
+</div>
+{%endblock content%}

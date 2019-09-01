@@ -16,7 +16,7 @@ class UserRegistrationForm(forms.ModelForm):
         
     def clean_password2(self):
         """
-        funcićon para verificar que el password sea correcto
+        función para verificar que el password sea correcto
         """
         cd = self.cleaned_data
         if cd['password'] != cd['password2']:

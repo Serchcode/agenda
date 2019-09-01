@@ -1,8 +1,8 @@
 {%extends 'base.html'%}
 {%load static%}
 {%block content%}
-<h4>Mi agenda (familiar)</h4>
-<a href="{% url "create_libreta_familia"%}">
+<h4>Mi agenda (trabajo)</h4>
+<a href="{% url "create_libreta_trabajo"%}">
     <button class="btn btn-dark" >Crear nuevo contacto</button>
 </a>
 <a href="{% url "main" %}">
@@ -15,7 +15,10 @@
 <th>A.Paterno</th>
 <th>A.Materno</th>
 <th>Teléfono</th>
-<th>Grupo</th>
+<th>Domicilio</th>
+<th>Empresa</th>
+<th>Rubro empresa</th>
+<th>Área</th>
 <th>Acciones</th>
 </tr>
 </thead>
@@ -26,10 +29,13 @@
 <td>{{ contacto.apellido_paterno }}</td>
 <td>{{ contacto.apellido_materno }}</td>
 <td>{{ contacto.telefono }}</td>
-<td>{{ contacto.status }}</td>
+<td>{{ contacto.domicilio }}</td>
+<td>{{ contacto.empresa }}</td>
+<td>{{ contacto.rubro_empresa }}</td>
+<td>{{ contacto.area }}</td>
 <td>
-        <a href="{% url "edit_libreta_familia"  contacto.id  %}" class="waves-effect waves-light btn-small">Editar</a>
-        <a href="{% url "delete_libreta_familia"  contacto.id  %}" class="waves-effect red waves-light btn-small">Borrar</a>
+    <a href="{% url "edit_libreta_trabajo"  contacto.id  %}" class="waves-effect waves-light btn-small">Editar</a>
+    <a href="{% url "delete_libreta_trabajo"  contacto.id  %}" class="waves-effect red waves-light btn-small">Borrar</a>
 </tr>
 
 {% endfor %}

@@ -1,13 +1,13 @@
 {%extends 'base.html'%}
 {%load static%}
 {%block content%}
-<a href="{% url "list_libreta_familia" %}">
+<a href="{% url "list_libreta_trabajo" %}">
     <button class="btn btn-dark" >Regresar a lista de contactos</button>
 </a>
 <div class="row">
     <div class="col l4 offset-l4">
         <center>
-            <h4>Contacto Familiar</h4>
+            <h4>Contacto Trabajo</h4>
         </center>
         <form method="post">{% csrf_token %}
             {{form}}
