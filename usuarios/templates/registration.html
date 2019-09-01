@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+<div class="container">	
+	<div class="row">
+		<div class="col l6 offset-l3">
+			<center>
+				<h4>Usuario nuevo</h4>
+			</center>
+			<form action="." method="post">
+				{%csrf_token%}
+				<label for="username">Usuario:</label>
+				{{form.username}}
+				<label for="first_name">Nombre:</label>
+				{{form.first_name}}
+				<label for="last_name">Apellidos:</label>
+				{{form.last_name}}
+				<label for="password">Password:</label>
+				{{form.password}}
+				<br>
+				<br>
+				<label for="password2">Password 2:</label>
+				{{form.password2}}
+				<center>
+				<input class="btn btn-dark" type="submit" value="Crear usuario">
+				<p>ó</p>
+				<a href="{%url 'login'%}">
+					<button class="btn btn-dark" >Login</button
+				</a>
+				</center>
+			</form>
+		</div>
+	</div>
+</div>
+{%endblock content%}

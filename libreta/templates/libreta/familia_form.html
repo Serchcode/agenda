@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<div class="row">
+    <div class="col l4 offset-l4">
+        <center>
+            <h4>Contacto</h4>
+        </center>
+        <form method="post">{% csrf_token %}
+            {{form}}
+            <center>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </center>  
+        </form>
+    </div>
+</div>
+{%endblock content%}

@@ -1,0 +1,9 @@
+*.pyc
+
+.vscode
+
+*.sublime*
+
+.env
+
+.idea
