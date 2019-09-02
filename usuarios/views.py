@@ -5,6 +5,16 @@ from django.contrib import messages
 from .forms import UserRegistrationForm
 
 
+class Index(View):
+    """
+    Vista index
+    """
+    def get(self, request):
+        """
+        funcion para mostrar index
+        """
+        template_name = "index.html"
+        return render(request,template_name)
 
 class Registration(View):
     """

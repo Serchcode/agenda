@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<center>
+<h4>Agenda</h4>
+<a href="{%url 'registro'%}">
+    <button class="btn btn-dark" >Crear usuario</button>
+</a>
+<br>
+<br>
+<a href="{%url 'login'%}">
+    <button class="btn btn-dark" >Login</button>
+</a>
+</center>
+{%endblock content%}
